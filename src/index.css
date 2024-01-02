@@ -1,0 +1,97 @@
+/* App.css */
+body {
+    font-size: 80%;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.App {
+    margin: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    /* height: 100vh; */
+    background-color: #f0f0f0;
+    /* Set a background color for the entire page */
+}
+
+/* Add additional styling as needed */
+
+/* Form.css */
+
+.schedule {
+    padding: 50px;
+    margin: 20px;
+
+}
+
+/* Form.css */
+
+.form {
+    width: 300px;
+    /* Set a width for the form */
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    /* Set a background color for the form */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Add a subtle box shadow */
+    margin-right: 20px;
+    /* Add margin to separate from the Card component */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+/* Add additional styling as needed */
+
+button {
+    background-color: #7950f2;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* Card.css */
+
+ol {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    /* Set a background color for each card item */
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(0.1, 0.1, 0.1, 0.1);
+    /* Add a subtle box shadow */
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+b {
+    font-weight: bold;
+}
