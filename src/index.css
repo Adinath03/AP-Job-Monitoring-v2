@@ -76,18 +76,23 @@ button {
 
 /* Card.css */
 
+/* Card.css */
+
 ol {
     list-style-type: none;
-    /* padding: 0; */
-
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 li {
-    width: 330px;
-    list-style-type: none;
-    margin: 20px 20px 20px 0;
+    flex: 1;
+    min-width: 250px;
+    /* Set a minimum width for each card item */
+    margin: 0 20px 20px 0;
     padding: 10px;
     background-color: #fff;
+    list-style-type: none;
     /* Set a background color for each card item */
     border-radius: 8px;
     box-shadow: 0 10px 10px rgba(0.1, 0.1, 0.1, 0.1);
@@ -97,7 +102,6 @@ li {
 h2 {
     margin-bottom: 10px;
     text-align: center;
-    /* align-items: center; */
 }
 
 b {
