@@ -1,7 +1,9 @@
 /* App.css */
 body {
-    font-size: 80%;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 16px;
+    /* You can adjust the size based on your preference */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+
 }
 
 .App {
