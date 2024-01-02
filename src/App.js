@@ -5,6 +5,7 @@ import holidayWednesday from "./holidayWednesday";
 import holidayThursday from "./holidayThursday";
 import Card from "./components/Card";
 import Form from "./components/Form";
+import Header from "./components/Header";
 
 function App() {
   // const [showSchedule, setShowSchedule] = useState(true);
@@ -33,16 +34,21 @@ function App() {
     }
   };
   return (
-    <div className="App">
-      <Form
-        searchDay={searchDay}
-        setSearchDay={setSearchDay}
-        holidayDay={holidayDay}
-        setHolidayDay={setHolidayDay}
-        // onWeekdaySubmit={onWeekdaySubmit}
-      />
-      <Card week={getCardData()} searchDay={searchDay} />
-    </div>
+    <>
+      <div className="App">
+        <Header />
+      </div>
+      <div className="App">
+        <Form
+          searchDay={searchDay}
+          setSearchDay={setSearchDay}
+          holidayDay={holidayDay}
+          setHolidayDay={setHolidayDay}
+          // onWeekdaySubmit={onWeekdaySubmit}
+        />
+        <Card week={getCardData()} searchDay={searchDay} />
+      </div>
+    </>
   );
 }
 

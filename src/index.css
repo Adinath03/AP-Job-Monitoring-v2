@@ -12,6 +12,8 @@ body {
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px #c4bebe;
     /* height: 100vh; */
     background-color: #f0f0f0;
     /* Set a background color for the entire page */
@@ -24,6 +26,7 @@ body {
 .schedule {
     padding: 50px;
     margin: 20px;
+
 
 }
 
@@ -75,13 +78,13 @@ button {
 
 ol {
     list-style-type: none;
-    padding: 0;
+    /* padding: 0; */
 
 }
 
 li {
     list-style-type: none;
-    margin-bottom: 20px;
+    margin: 20px;
     padding: 10px;
     background-color: #fff;
     /* Set a background color for each card item */
@@ -92,6 +95,8 @@ li {
 
 h2 {
     margin-bottom: 10px;
+    text-align: center;
+    /* align-items: center; */
 }
 
 b {
