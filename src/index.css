@@ -23,13 +23,14 @@ body {
 
 /* Form.css */
 
-.schedule {
+/* .schedule {
     padding: 50px;
     margin: 20px;
-    /* width: 300px; */
+    width: 300px;
 
 }
 
+*/
 /* Form.css */
 
 .form {
@@ -83,6 +84,10 @@ ol {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+}
+
+ul {
+    padding-inline-start: 5px;
 }
 
 li {
