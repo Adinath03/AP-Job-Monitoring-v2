@@ -1,5 +1,5 @@
 {
-  "homepage": "http://Adinath03.github.io/AP-Job-Monitoring",
+  "homepage": "https://Adinath03.github.io/AP-Job-Monitoring",
   "name": "ap-job-monitoring",
   "version": "0.1.0",
   "private": true,
@@ -16,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build -r https://github.com/Adinath03/AP-Job-Monitoring.git",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
