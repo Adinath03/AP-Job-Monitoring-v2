@@ -47,7 +47,7 @@ const holidayWednesday = {
     {
       name: "US ACH USTNOR (Special Job)",
       identification: "PPADF_ACH_USTNOR_D1_PE1",
-      reguh: "",
+      reguh: "USTSP",
     },
     {
       name: "US ACH OPAL",
@@ -115,7 +115,7 @@ const holidayWednesday = {
     {
       name: "US ACH - USTFRI",
       identification: "PPADF_ACH_FRI_PE1",
-      reguh: "",
+      reguh: "USTFM",
     },
     {
       name: "US ACH OPAL",

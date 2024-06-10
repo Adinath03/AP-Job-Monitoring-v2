@@ -19,13 +19,13 @@ const NormalWeek = {
       name: "Canada ACH",
       identification: "PPADF_F110_CAALL_PE1",
       reguh: "CAALL",
-      idoc: "PEXR2002",
+      idoc: "PEXR2001",
     },
     {
       name: "WIREU",
       identification: "PPADF_F110_WIREU_PE1",
       reguh: "WIREU",
-      idoc: "PEXR2001",
+      idoc: "PEXR2002",
     },
   ],
   Tuesday: [
@@ -53,13 +53,13 @@ const NormalWeek = {
       name: "Canada ACH",
       identification: "PPADF_F110_CAALL_PE1",
       reguh: "CAALL",
-      idoc: "PEXR2002",
+      idoc: "PEXR2001",
     },
     {
       name: "WIREU",
       identification: "PPADF_F110_WIREU_PE1",
       reguh: "WIREU",
-      idoc: "PEXR2001",
+      idoc: "PEXR2002",
     },
   ],
   Wednesday: [
@@ -87,13 +87,13 @@ const NormalWeek = {
       name: "Canada ACH",
       identification: "PPADF_F110_CAALL_PE1",
       reguh: "CAALL",
-      idoc: "PEXR2002",
+      idoc: "PEXR2001",
     },
     {
       name: "WIREU",
       identification: "PPADF_F110_WIREU_PE1",
       reguh: "WIREU",
-      idoc: "PEXR2001",
+      idoc: "PEXR2002",
     },
   ],
   Thursday: [
@@ -105,7 +105,7 @@ const NormalWeek = {
     {
       name: "US ACH USTSP",
       identification: "PPADF_ACH_SP_PE1",
-      reguh: "",
+      reguh: "USTSP",
     },
     {
       name: "US ACH USTMT",
@@ -121,13 +121,13 @@ const NormalWeek = {
       name: "Canada ACH",
       identification: "PPADF_F110_CAALL_PE1",
       reguh: "CAALL",
-      idoc: "PEXR2002",
+      idoc: "PEXR2001",
     },
     {
       name: "WIREU",
       identification: "PPADF_F110_WIREU_PE1",
       reguh: "WIREU",
-      idoc: "PEXR2001",
+      idoc: "PEXR2002",
     },
   ],
   Friday: [
@@ -139,7 +139,7 @@ const NormalWeek = {
     {
       name: "US ACH - USTFRI",
       identification: "PPADF_ACH_FRI_PE1",
-      reguh: "",
+      reguh: "USTFM",
     },
     {
       name: "US ACH OPAL",
@@ -150,13 +150,13 @@ const NormalWeek = {
       name: "Canada ACH",
       identification: "PPADF_F110_CAALL_PE1",
       reguh: "CAALL",
-      idoc: "PEXR2002",
+      idoc: "PEXR2001",
     },
     {
       name: "WIREU",
       identification: "PPADF_F110_WIREU_PE1",
       reguh: "WIREU",
-      idoc: "PEXR2001",
+      idoc: "PEXR2002",
     },
     {
       name: "US ACH USTFB",

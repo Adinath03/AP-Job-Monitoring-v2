@@ -121,7 +121,7 @@ const holidayThursday = {
     {
       name: "US ACH - USTFRI",
       identification: "PPADF_ACH_FRI_PE1",
-      reguh: "",
+      reguh: "USTFM",
     },
     {
       name: "US ACH OPAL",
