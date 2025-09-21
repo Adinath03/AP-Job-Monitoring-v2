@@ -9,6 +9,7 @@ import holidayFriday from "./holidayFriday";
 import Card from "./components/Card";
 import Form from "./components/Form";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   const [searchDay, setSearchDay] = useState("Monday");
@@ -58,6 +59,9 @@ function App() {
         />
         <Card week={getCardData()} searchDay={searchDay} />
       </div>
+      <div className="controls-and-cards"> ... </div>
+
+      <Footer />
     </>
   );
 }

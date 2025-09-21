@@ -161,12 +161,6 @@ const nextTuesday = {
       identification: "USALL",
     },
     {
-      name: "US ACH - USTFRI",
-      F110job: "PPADF_F110_USTFRI_PE1",
-      paymentMediumJob: "PPADF_ACH_FRI_PE1",
-      identification: "USTFM",
-    },
-    {
       name: "US ACH OPAL",
       F110job: "PPADF_F110_OPAL_PE1",
       paymentMediumJob: "Spool generates in F110 Job",

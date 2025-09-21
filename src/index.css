@@ -1,87 +1,330 @@
-/* App.css */
-body {
-    font-size: 16px;
-    font-family: 'Pacifico', Arial, sans-serif;
-    /* Changed font to Pacifico */
+/* App.css - refreshed + mobile-friendly */
+
+/* If you want Pacifico for the header, add this in your index.html <head>:
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+*/
+:root {
+    --bg: #f7f8fb;
+    --card-bg: #ffffff;
+    --muted: #6b7280;
+    --accent: #7f5de4;
+    --danger: #ff6b6b;
+    --shadow: 0 6px 18px rgba(22, 27, 37, 0.06);
+    --radius: 12px;
+    --gap: 16px;
+    --max-width: 980px;
+    --font-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    --font-display: "Pacifico", var(--font-sans);
 }
 
-.App {
-    margin: 20px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 8px;
-    box-shadow: 2px 2px 2px 2px #c4bebe;
-    background-color: #f0f0f0;
-}
-
-.form {
-    width: 300px;
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 8px;
-}
-
-select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
+/* Base */
+* {
     box-sizing: border-box;
 }
 
-button {
-    background-color: #ff6b6b;
-    /* Changed button color to red */
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+html,
+body,
+#root {
+    height: 100%;
 }
 
-/* Card.css */
-ol {
-    list-style-type: none;
-    padding: 0;
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    background: linear-gradient(180deg, #fbfdff 0%, var(--bg) 100%);
+    color: #111827;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 12px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
-ul {
-    padding-inline-start: 5px;
+/* App shell */
+.App {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 12px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap);
+    align-items: start;
 }
 
-li {
-    flex: 1;
-    min-width: 250px;
-    margin: 0 20px 20px 0;
-    padding: 10px;
-    background-color: #f9f9f9;
-    list-style-type: none;
-    /* Changed card background color to light gray */
+/* Header */
+.app-header {
+    background: linear-gradient(90deg, rgba(127, 93, 228, 0.06), rgba(127, 93, 228, 0.02));
+    padding: 18px 20px;
+    border-radius: calc(var(--radius) + 2px);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-family: var(--font-display);
+    /* uses Pacifico if loaded */
+    font-size: 1.6rem;
+    letter-spacing: -0.5px;
+    color: var(--accent);
+}
+
+.app-subtitle {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+.app-note {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+/* Layout: form + cards container */
+.controls-and-cards {
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: 360px 1fr;
+    align-items: start;
+}
+
+/* Form */
+.form {
+    width: 100%;
+    background: var(--card-bg);
+    padding: 16px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form label {
+    font-weight: 600;
+    color: #111827;
+    font-size: 0.9rem;
+}
+
+select,
+input[type="text"],
+button {
+    font-family: inherit;
+    font-size: 1rem;
     border-radius: 8px;
-    box-shadow: 0 10px 10px rgba(0.1, 0.1, 0.1, 0.1);
+    border: 1px solid #e6e9ee;
+    padding: 10px 12px;
+    outline: none;
+    transition: box-shadow .12s ease, transform .06s ease;
 }
 
-h2 {
-    margin-bottom: 10px;
-    text-align: center;
-    color: #7f5de4;
-    /* Changed heading color */
+select:focus,
+input[type="text"]:focus {
+    box-shadow: 0 6px 18px rgba(125, 85, 233, 0.12);
+    border-color: rgba(127, 93, 228, 0.6);
 }
 
-b {
-    font-weight: bold;
+/* Buttons */
+button {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 12px 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 22px rgba(20, 20, 40, 0.06);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Schedule / Card area */
+.schedule {
+    width: 100%;
+    background: transparent;
+    display: block;
+}
+
+/* Each weekday list */
+.schedule ul {
+    list-style: none;
+    margin: 0 0 var(--gap) 0;
+    padding: 12px;
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, #ffffff, #fbfbff);
+    box-shadow: var(--shadow);
+}
+
+/* Day heading */
+.schedule h2 {
+    margin: 0 0 12px 0;
+    text-align: left;
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+
+/* Cards inside each day */
+.schedule li {
+    display: block;
+    margin: 0 0 12px 0;
+    padding: 12px;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid #f1f3f7;
+    box-shadow: 0 6px 14px rgba(16, 24, 40, 0.04);
+}
+
+/* Info rows */
+.schedule p {
+    margin: 6px 0;
+    color: #111827;
+    font-size: 0.95rem;
+}
+
+.schedule p b {
+    color: #0f172a;
+    margin-right: 6px;
+    font-weight: 700;
+}
+
+/* Small helper / holiday note */
+.hol-note {
+    padding: 12px;
+    border-radius: 10px;
+    background: #fff5f5;
+    border: 1px solid #ffe3e3;
+    color: #7a2b2b;
+    font-weight: 600;
+}
+
+/* Responsive: phones and small tablets */
+@media (max-width: 880px) {
+    .controls-and-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .form {
+        order: 1;
+    }
+
+    .schedule {
+        order: 2;
+    }
+
+    .App {
+        padding: 8px;
+    }
+
+    .form {
+        padding: 14px;
+    }
+
+    select,
+    button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+/* Very small devices: increase tap targets */
+@media (max-width: 420px) {
+    body {
+        padding: 8px;
+    }
+
+    .app-header h1 {
+        font-size: 1.35rem;
+    }
+
+    .form {
+        padding: 12px;
+    }
+
+    .schedule li {
+        padding: 10px;
+    }
+
+    select,
+    button {
+        padding: 14px;
+        border-radius: 12px;
+    }
+}
+
+/* Footer */
+.app-footer {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(250, 250, 255, 0.6));
+    border: 1px solid #eef2ff;
+    box-shadow: 0 6px 14px rgba(16, 24, 40, 0.03);
+    color: var(--muted, #6b7280);
+    font-size: 0.9rem;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 0.88rem;
+}
+
+.footer-links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
+.copyright {
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 640px) {
+    .app-footer {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: left;
+    }
+
+    .footer-right {
+        align-items: flex-start;
+    }
 }
