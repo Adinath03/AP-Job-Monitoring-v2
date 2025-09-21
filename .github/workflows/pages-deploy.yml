@@ -1,6 +1,6 @@
 name: Build and deploy to GitHub Pages
 
-# Trigger on pushes to v2.0 (change branch name if you want to deploy from another branch)
+# Trigger on pushes to v2.0 (change if you want deploy from another branch)
 on:
   push:
     branches:
@@ -31,7 +31,8 @@ jobs:
         run: npm run build
 
       - name: Upload artifact for GitHub Pages
-        uses: actions/upload-pages-artifact@v1
+        # use v3 of the upload-pages-artifact action (uses updated artifact infra)
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./build
 
@@ -44,4 +45,5 @@ jobs:
 
     steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+        # use v4 of deploy-pages which works with the new artifact action
+        uses: actions/deploy-pages@v4
