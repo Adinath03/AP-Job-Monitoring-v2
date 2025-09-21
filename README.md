@@ -30,3 +30,10 @@ git clone https://github.com/Adinath03/AP-Job-Monitoring-v2.git
 cd AP-Job-Monitoring-v2
 npm install
 ```
+
+# AP Job Monitoring (v2.0)
+
+![Deploy](https://github.com/Adinath03/AP-Job-Monitoring-v2/actions/workflows/pages-deploy.yml/badge.svg)
+[![View Site](https://img.shields.io/badge/🌐%20Live%20Site-AP%20Job%20Monitoring%20v2-blue)](https://adinath03.github.io/AP-Job-Monitoring-v2)
+
+A React-based tool to schedule and monitor SAP background jobs with **holiday-aware logic**.
