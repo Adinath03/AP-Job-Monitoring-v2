@@ -12,21 +12,31 @@ export default function Card({ week, searchDay }) {
                     <b>Name:</b> {weekday.name}
                   </p>
                 )}
+
+                {weekday.F110job !== undefined && (
+                  <p>
+                    <b>F110 Job:</b> {weekday.F110job}
+                  </p>
+                )}
+
+                {weekday.paymentMediumJob && (
+                  <p>
+                    <b>Payment Medium Job:</b> {weekday.paymentMediumJob}
+                  </p>
+                )}
+
                 {weekday.identification && (
                   <p>
                     <b>Identification:</b> {weekday.identification}
                   </p>
                 )}
-                {weekday.reguh && (
+
+                {weekday.idocType && (
                   <p>
-                    <b>REGUH:</b> {weekday.reguh}
+                    <b>IDOC Type:</b> {weekday.idocType}
                   </p>
                 )}
-                {weekday.idoc && (
-                  <p>
-                    <b>IDOC:</b> {weekday.idoc}
-                  </p>
-                )}
+
                 {weekday.hol && (
                   <p>
                     <b>{weekday.hol}</b>
@@ -35,9 +45,7 @@ export default function Card({ week, searchDay }) {
               </li>
             ))}
           </ul>
-        ) : (
-          ""
-        )
+        ) : null
       )}
     </div>
   );

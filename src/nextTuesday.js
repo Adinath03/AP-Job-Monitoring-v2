@@ -1,4 +1,4 @@
-const NormalWeek = {
+const nextTuesday = {
   Monday: [
     {
       name: "USALL Checks",
@@ -192,7 +192,19 @@ const NormalWeek = {
       paymentMediumJob: "Spool generates in F110 Job",
       identification: "USTFB",
     },
+    {
+      name: "US ACH USTSP HOLIDAY1 (Special Job)",
+      F110job: "PPADF_F110_USTSP_HOLIDAY1_PE1",
+      paymentMediumJob: "PPADF_ACH_SP1_PE1",
+      identification: "HOSP1",
+    },
+    {
+      name: "US ACH USTNOR(Special Job)",
+      F110job: "PPADF_F110_USTNOR_HOLTUE_D2_PE1",
+      paymentMediumJob: "PPADF_ACH_FRI1_PE1",
+      identification: "TND-1",
+    },
   ],
 };
 
-export default NormalWeek;
+export default nextTuesday;
