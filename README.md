@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# AP Job Monitoring (v2.0)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based tool to schedule and monitor SAP background jobs with **holiday-aware logic**.  
+It ensures vendor payment jobs and other critical jobs are run on the correct working days, avoiding duplicate runs or missed deadlines due to holidays.
 
-## Available Scripts
+👉 Live (v1): [AP Job Monitoring](https://adinath03.github.io/AP-Job-Monitoring/)  
+👉 This repository is for **v2.0 development**.
 
-In the project directory, you can run
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 📅 **Holiday-aware job scheduling** with support for **holiday -1** and **holiday -2** rules.
+- 🔄 **Two job types**:
+  - **Regular jobs** → run on specific weekdays, but skip or adjust around holidays.
+  - **Special jobs** → triggered only on holiday -1 or holiday -2.
+- ⚙️ **Config-driven** → jobs and rules defined in `src/data/jobs.json`.
+- 📊 **Interactive UI** → visualize and test how jobs are scheduled week by week.
+- 🧩 Modular code in `src/utils` for date handling and scheduling logic.
+- 🚀 Deployable to GitHub Pages.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Getting Started (Local Development)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone the repo and install dependencies:
 
-### `npm run build`
+```bash
+git clone https://github.com/Adinath03/AP-Job-Monitoring-v2.git
+cd AP-Job-Monitoring-v2
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# AP Job Monitoring (v2.0)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Deploy](https://github.com/Adinath03/AP-Job-Monitoring-v2/actions/workflows/pages-deploy.yml/badge.svg)
+[![View Site](https://img.shields.io/badge/🌐%20Live%20Site-AP%20Job%20Monitoring%20v2-blue)](https://adinath03.github.io/AP-Job-Monitoring-v2)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+A React-based tool to schedule and monitor SAP background jobs with **holiday-aware logic**.
